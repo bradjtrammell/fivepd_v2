@@ -83,6 +83,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.2" />
+        <PackageReference Include="SourceGear.sqlite3" Version="3.53.4" />
         <PackageReference Include="System.Data.SQLite" Version="2.0.2" />
         <PackageReference Include="YamlDotNet" Version="13.1.1" />
     </ItemGroup>
@@ -110,7 +111,7 @@
     </ItemGroup>
      <Target Name="CopyNativeSQLite" AfterTargets="Build">
         <ItemGroup>
-            <NativeFiles Include="$(NuGetPackageRoot)sqlite\3.53.4\runtimes\win-x64\native\e_sqlite3.dll" />
+            <NativeFiles Include="$(NuGetPackageRoot)sourcegear.sqlite3\3.53.4\runtimes\win-x64\native\e_sqlite3.dll" />
         </ItemGroup>
         <Copy SourceFiles="@(NativeFiles)"
               DestinationFolder="$(OutputPath)\runtimes\win-x64\native"
